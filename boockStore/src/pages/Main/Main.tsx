@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Header } from '../../components/Header'
 import { Search } from './components/Search'
 import { MainContainer, TableMain } from './styles'
+import { priceFormatter, dateFormater } from '../../ultis/formatter'
 
 interface Books {
   id: number
@@ -41,9 +42,9 @@ export function Main() {
               return (
                 <tr key={books.id}>
                   <td width="50%">{books.description}</td>
-                  <td>{books.price}</td>
+                  <td>{priceFormatter.format(books.price)}</td>
                   <td>{books.category}</td>
-                  <td>{books.createdAt}</td>
+                  <td>{dateFormater.format(new Date(books.createdAt))}</td>
                 </tr>
               )
             })}
