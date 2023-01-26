@@ -7,6 +7,7 @@ import { BooksContext } from '../../contexts/BooksContext'
 
 export function Main() {
   const { books } = useContext(BooksContext)
+
   return (
     <div>
       <Header />

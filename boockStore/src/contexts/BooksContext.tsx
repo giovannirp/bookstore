@@ -11,6 +11,7 @@ interface Books {
 
 interface BooksContextType {
   books: Books[]
+  fetchBooks: (query?: string) => Promise<void>
 }
 
 export const BooksContext = createContext({} as BooksContextType)
@@ -22,11 +23,14 @@ interface BooksProviderProps {
 export function BooksContextProvider({ children }: BooksProviderProps) {
   const [books, setBooks] = useState<Books[]>([])
 
-  async function fetchBooks() {
+  async function fetchBooks(query?: string) {
     const url = 'http://localhost:3000/books'
 
-    const res = await fetch(url)
+    if (query) {
+      url.searchParams.append('q', query)
+    }
 
+    const res = await fetch(url)
     const data = await res.json()
 
     setBooks(data)
@@ -37,6 +41,8 @@ export function BooksContextProvider({ children }: BooksProviderProps) {
   }, [])
 
   return (
-    <BooksContext.Provider value={{ books }}>{children}</BooksContext.Provider>
+    <BooksContext.Provider value={{ books, fetchBooks }}>
+      {children}
+    </BooksContext.Provider>
   )
 }
