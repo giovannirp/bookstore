@@ -40,7 +40,7 @@ export const SearchForm = styled.form`
       cursor: not-allowed;
     }
 
-    &:hover {
+    &:not(:disabled):hover {
       background: ${(props) => props.theme['green-500']};
       transition: background-color 0.2s, color 0.2s, border-color 0.2s;
       color: ${(props) => props.theme.white};

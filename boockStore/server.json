@@ -15,6 +15,14 @@
       "category": "Alimentação",
       "price": 45,
       "createdAt": "2023-01-18T17:26:04.067Z"
+    },
+    {
+      "id": 32,
+      "description": "Caçador de pipas",
+      "type": "outcome",
+      "category": "Livros",
+      "price": 35,
+      "createdAt": "2023-04-24T17:25:04.067Z"
     }
   ]
 }
