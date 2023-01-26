@@ -28,7 +28,7 @@ export function Main() {
 
 
   useEffect(() => {
-    fetchBooks()
+    fetchBooks();
   }, [])
 
   return (
