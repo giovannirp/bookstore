@@ -1,8 +1,36 @@
+import { useEffect, useState } from "react";
 import { Header } from "../../components/Header";
 import { Search } from "./components/Search";
 import { MainContainer, TableMain } from "./styles";
 
+interface Books {
+  id: number;
+  description: string;
+  type: 'income' | 'outcome'
+  price: number;
+  createdAt: number;
+  category: string;
+}
+
 export function Main() {
+  const [books, setBooks] = useState<Books[]>();
+
+  async function fetchBooks() {
+    const url = "http://localhost:3000/books";
+
+    const res = await fetch(url)
+
+    const data = await res.json();
+
+    setBooks(data)
+
+  }
+
+
+  useEffect(() => {
+    fetchBooks()
+  }, [])
+
   return (
     <div>
       <Header />
@@ -11,18 +39,16 @@ export function Main() {
 
         <TableMain>
           <tbody>
-            <tr>
-              <td width="50%">Livro de HTML5</td>
-              <td>12.000,00</td>
-              <td>Venda</td>
-              <td>2023-01-25T15:38:55.826Z</td>
-            </tr>
-            <tr>
-              <td width="50%">Ikigai o caminho da felicidade</td>
-              <td>12.000,00</td>
-              <td>Venda</td>
-              <td>2023-01-25T15:38:55.826Z</td>
-            </tr>
+            {books?.map((books) => {
+              return(
+                <tr key={books.id}>
+                  <td width="50%">{books.description}</td>
+                  <td>{books.price}</td>
+                  <td>{books.category}</td>
+                  <td>{books.createdAt}</td>
+              </tr>
+              )
+            })}
           </tbody>
         </TableMain>
       </MainContainer>
