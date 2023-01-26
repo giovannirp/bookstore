@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const SearchForm = styled.form`
   display: flex;
@@ -8,14 +8,14 @@ export const SearchForm = styled.form`
     width: 100%;
     max-width: 957px;
     padding: 1rem;
-    background: ${props => props.theme["gray-900"]};
-    color: ${props => props.theme["gray-500"]};
+    background: ${(props) => props.theme['gray-900']};
+    color: ${(props) => props.theme['gray-500']};
     border-radius: 6px;
     padding-left: 10px;
     border: 0;
 
     &::placeholder {
-      color: ${props => props.theme["gray-500"]}
+      color: ${(props) => props.theme['gray-500']};
     }
   }
 
@@ -30,9 +30,9 @@ export const SearchForm = styled.form`
     padding: 1rem;
     border-radius: 6px;
     font-size: 16px;
-    border: 2px solid ${props => props.theme["green-300"]};
+    border: 2px solid ${(props) => props.theme['green-300']};
     background: transparent;
-    color: ${props => props.theme["green-300"]};
+    color: ${(props) => props.theme['green-300']};
     font-weight: bold;
 
     &:disabled {
@@ -41,9 +41,9 @@ export const SearchForm = styled.form`
     }
 
     &:hover {
-      background: ${props => props.theme["green-500"]};
+      background: ${(props) => props.theme['green-500']};
       transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-      color: ${props => props.theme.white}
+      color: ${(props) => props.theme.white};
     }
   }
 `

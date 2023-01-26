@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ContainerHeader = styled.header`
-  background: ${(props) => props.theme["green-700"]};
+  background: ${(props) => props.theme['green-700']};
   padding: 2.5rem 0 7.6rem;
   height: 212px;
-  border-bottom: 2px solid ${props => props.theme["green-300"]};
-
+  border-bottom: 2px solid ${(props) => props.theme['green-300']};
 `
 
 export const ContentHeader = styled.div`
@@ -15,12 +14,12 @@ export const ContentHeader = styled.div`
 
   display: flex;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 `
 
 export const ButtonRegistration = styled.div`
-  background: ${(props => props.theme["green-500"])};
-  border: 2px solid ${props => props.theme["green-300"]};
+  background: ${(props) => props.theme['green-500']};
+  border: 2px solid ${(props) => props.theme['green-300']};
 
   color: ${(props) => props.theme.white};
   border-radius: 6px;
@@ -35,7 +34,6 @@ export const ButtonRegistration = styled.div`
   cursor: pointer;
 
   &:hover {
-    background: ${(props => props.theme["gray-900"])};
-
+    background: ${(props) => props.theme['gray-900']};
   }
 `

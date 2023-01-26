@@ -1,6 +1,5 @@
-import { ButtonRegistration, ContainerHeader, ContentHeader } from "./styles";
-import logo from "../../assets/logo.png"
-
+import { ButtonRegistration, ContainerHeader, ContentHeader } from './styles'
+import logo from '../../assets/logo.png'
 
 export function Header() {
   return (
