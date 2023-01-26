@@ -13,6 +13,10 @@ export const SearchForm = styled.form`
     border-radius: 6px;
     padding-left: 10px;
     border: 0;
+
+    &::placeholder {
+      color: ${props => props.theme["gray-500"]}
+    }
   }
 
   button {
