@@ -1,35 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { Header } from '../../components/Header'
 import { Search } from './components/Search'
 import { MainContainer, TableMain } from './styles'
 import { priceFormatter, dateFormater } from '../../ultis/formatter'
-
-interface Books {
-  id: number
-  description: string
-  type: 'income' | 'outcome'
-  price: number
-  createdAt: number
-  category: string
-}
+import { BooksContext } from '../../contexts/BooksContext'
 
 export function Main() {
-  const [books, setBooks] = useState<Books[]>()
-
-  async function fetchBooks() {
-    const url = 'http://localhost:3000/books'
-
-    const res = await fetch(url)
-
-    const data = await res.json()
-
-    setBooks(data)
-  }
-
-  useEffect(() => {
-    fetchBooks()
-  }, [])
-
+  const { books } = useContext(BooksContext)
   return (
     <div>
       <Header />
