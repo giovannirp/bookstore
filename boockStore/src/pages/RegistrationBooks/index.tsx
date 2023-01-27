@@ -12,10 +12,13 @@ import {
 export function RegistrationBooks() {
   const initilForm = {
     description: '',
+    type: '',
     price: '',
     category: '',
+    createdAt: '',
   }
 
+  const [registration, setRegistration] = useState<String[]>([])
   const [formState, setFormState] = useState(initilForm)
 
   const handleInput = (event: any) => {
@@ -27,6 +30,26 @@ export function RegistrationBooks() {
 
   const handleSubmit = (event: any) => {
     event.preventDefault()
+
+    const formGeneral = {
+      description: formState.description,
+      type: formState.type,
+      category: formState.category,
+      price: formState.price,
+      createdAt: new Date(),
+    }
+
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formGeneral),
+    }
+
+    fetch('http://localhost:3000/books', requestOptions)
+      .then((response) => response.json())
+      .then((data) => setRegistration(data))
   }
 
   return (

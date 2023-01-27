@@ -3,7 +3,6 @@
     {
       "id": 1,
       "description": "Livro de HTML 5",
-      "type": "income",
       "category": "TI",
       "price": 40,
       "createdAt": "2023-01-18T17:24:43.459Z"
@@ -11,7 +10,6 @@
     {
       "id": 2,
       "description": "O Hamburguer",
-      "type": "outcome",
       "category": "Alimentação",
       "price": 45,
       "createdAt": "2023-01-18T17:26:04.067Z"
@@ -19,10 +17,48 @@
     {
       "id": 32,
       "description": "Caçador de pipas",
-      "type": "outcome",
       "category": "Livros",
       "price": 35,
       "createdAt": "2023-04-24T17:25:04.067Z"
+    },
+    {
+      "description": "Gigi ader",
+      "category": "Livro",
+      "price": "47",
+      "createdAt": "2023-04-24T17:25:04.067Z",
+      "id": 33
+    },
+    {
+      "description": "dfdf",
+      "type": "",
+      "category": "Ali",
+      "price": "14",
+      "createdAt": "2023-01-27T20:03:37.048Z",
+      "id": 34
+    },
+    {
+      "description": "dfdf",
+      "type": "",
+      "category": "Ali",
+      "price": "14",
+      "createdAt": "2023-01-27T20:03:38.833Z",
+      "id": 35
+    },
+    {
+      "description": "Giovanni",
+      "type": "",
+      "category": "48",
+      "price": "47",
+      "createdAt": "2023-01-27T20:04:11.035Z",
+      "id": 36
+    },
+    {
+      "description": "",
+      "type": "",
+      "category": "",
+      "price": "",
+      "createdAt": "2023-01-27T20:10:17.261Z",
+      "id": 37
     }
   ]
 }
