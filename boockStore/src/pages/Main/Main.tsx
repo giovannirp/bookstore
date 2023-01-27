@@ -15,6 +15,9 @@ export function Main() {
 
         <TableMain>
           <tbody>
+            {books.length === 0 && (
+              <div>Esse item, não existe em nossos cadadastro</div>
+            )}
             {books?.map((books) => {
               return (
                 <tr key={books.id}>
