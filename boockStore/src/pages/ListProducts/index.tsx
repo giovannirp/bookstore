@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { BooksContext } from '../../contexts/BooksContext'
 import { dateFormater } from '../../ultis/formatter'
 
-import { ContainerListProducts } from './styles'
+import { ContainerListProducts, TableMain } from './styles'
 
 export function ListProducts() {
   const { books } = useContext(BooksContext)
@@ -10,7 +10,7 @@ export function ListProducts() {
   return (
     <ContainerListProducts>
       <h2>Lista de produtos</h2>
-      <table>
+      <TableMain>
         <tbody>
           <tr>
             <th>Produto</th>
@@ -25,7 +25,7 @@ export function ListProducts() {
             )
           })}
         </tbody>
-      </table>
+      </TableMain>
     </ContainerListProducts>
   )
 }
