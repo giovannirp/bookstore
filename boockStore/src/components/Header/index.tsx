@@ -11,7 +11,6 @@ import { BooksContext } from '../../contexts/BooksContext'
 export function Header() {
   const { books } = useContext(BooksContext)
 
-  console.log('estou no header', books)
   return (
     <ContainerHeader>
       <ContentHeader>
