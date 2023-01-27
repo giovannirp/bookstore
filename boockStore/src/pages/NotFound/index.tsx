@@ -1,3 +1,11 @@
+import { SmileyXEyes } from 'phosphor-react'
+import { ContainerNotFound, IconSmileyXEyes, TextNotFound } from './styles'
+
 export function NotFound() {
-  return <div>Página não existe</div>
+  return (
+    <ContainerNotFound>
+      <TextNotFound>Erro 404 Página não Encontrada no</TextNotFound>
+      <IconSmileyXEyes size={60} />
+    </ContainerNotFound>
+  )
 }
