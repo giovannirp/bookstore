@@ -25,6 +25,10 @@ export function Search() {
   })
 
   async function handleSearch(data: SearchFormInputs) {
+    if (data.query === '') {
+      alert('Digite o campoque está vazio')
+      return false
+    }
     await fetchBooks(data.query)
   }
 

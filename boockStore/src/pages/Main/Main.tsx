@@ -10,7 +10,6 @@ export function Main() {
 
   return (
     <div>
-      <Header />
       <MainContainer>
         <Search />
 

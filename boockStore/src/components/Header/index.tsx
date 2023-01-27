@@ -1,4 +1,9 @@
-import { ButtonRegistration, ContainerHeader, ContentHeader } from './styles'
+import {
+  ButtonRegistration,
+  ContainerHeader,
+  ContentHeader,
+  LinkLogo,
+} from './styles'
 import logo from '../../assets/logo.png'
 import { useContext } from 'react'
 import { BooksContext } from '../../contexts/BooksContext'
@@ -10,9 +15,13 @@ export function Header() {
   return (
     <ContainerHeader>
       <ContentHeader>
-        <img src={logo} width="80" alt="" />
+        <LinkLogo to="/">
+          <img src={logo} width="80" alt="" />
+        </LinkLogo>
 
-        <ButtonRegistration>Cadastrar Livros</ButtonRegistration>
+        <ButtonRegistration to="/registration">
+          Cadastrar Livros
+        </ButtonRegistration>
       </ContentHeader>
     </ContainerHeader>
   )

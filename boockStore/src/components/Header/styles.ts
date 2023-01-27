@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 export const ContainerHeader = styled.header`
   background: ${(props) => props.theme['green-700']};
@@ -17,9 +18,11 @@ export const ContentHeader = styled.div`
   align-items: center;
 `
 
-export const ButtonRegistration = styled.div`
+export const ButtonRegistration = styled(Link)`
   background: ${(props) => props.theme['green-500']};
   border: 2px solid ${(props) => props.theme['green-300']};
+  text-decoration: none;
+  border: 0;
 
   color: ${(props) => props.theme.white};
   border-radius: 6px;
@@ -35,5 +38,11 @@ export const ButtonRegistration = styled.div`
 
   &:hover {
     background: ${(props) => props.theme['gray-900']};
+  }
+`
+
+export const LinkLogo = styled(Link)`
+  &:focus {
+    outline: 0;
   }
 `
