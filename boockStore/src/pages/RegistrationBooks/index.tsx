@@ -31,6 +31,21 @@ export function RegistrationBooks() {
   const handleSubmit = (event: any) => {
     event.preventDefault()
 
+    if (formState.description === '') {
+      alert('Favor digite o campo de descrição')
+      return false
+    }
+
+    if (formState.price === '') {
+      alert('Favor digite o campo de preço')
+      return false
+    }
+
+    if (formState.category === '') {
+      alert('Favor digite o campo de categoria')
+      return false
+    }
+
     const formGeneral = {
       description: formState.description,
       type: formState.type,
@@ -50,6 +65,8 @@ export function RegistrationBooks() {
     fetch('http://localhost:3000/books', requestOptions)
       .then((response) => response.json())
       .then((data) => setRegistration(data))
+
+    setFormState({ ...initilForm })
   }
 
   return (
