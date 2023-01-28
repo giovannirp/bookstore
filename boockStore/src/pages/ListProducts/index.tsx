@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { BooksContext } from '../../contexts/BooksContext'
 import { dateFormater } from '../../ultis/formatter'
 
@@ -6,10 +6,17 @@ import { ContainerListProducts, TableMain, TdUnic, ThUnic } from './styles'
 
 export function ListProducts() {
   const { books } = useContext(BooksContext)
+  const [booksDelete, setBooksDelete] = useState([])
 
   const deleteButton = (item: any) => {
     console.log(item)
-    // https://jasonwatmore.com/post/2021/09/21/fetch-http-delete-request-examples
+    const requestOptions = {
+      method: 'DELETE',
+    }
+
+    fetch(`http://localhost:3000/books/${item}`, requestOptions).then(() =>
+      setBooksDelete({ ...booksDelete }),
+    )
   }
 
   return (

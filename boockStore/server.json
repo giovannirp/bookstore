@@ -1,25 +1,11 @@
 {
   "books": [
     {
-      "id": 1,
-      "description": "Livro de HTML 5",
-      "category": "TI",
-      "price": 40,
-      "createdAt": "2023-01-18T17:24:43.459Z"
-    },
-    {
       "id": 2,
       "description": "O Hamburguer",
       "category": "Alimentação",
       "price": 45,
       "createdAt": "2023-01-18T17:26:04.067Z"
-    },
-    {
-      "id": 32,
-      "description": "Caçador de pipas",
-      "category": "Livros",
-      "price": 35,
-      "createdAt": "2023-04-24T17:25:04.067Z"
     },
     {
       "description": "Ikagai o caminho da felicidades",
@@ -36,22 +22,6 @@
       "price": "20",
       "createdAt": "2023-01-27T20:14:28.645Z",
       "id": 34
-    },
-    {
-      "description": "Ventilador",
-      "type": "",
-      "category": "Eletronicos",
-      "price": "180",
-      "createdAt": "2023-01-27T20:15:08.550Z",
-      "id": 35
-    },
-    {
-      "description": "Doris feliz",
-      "type": "",
-      "category": "Livro",
-      "price": "45",
-      "createdAt": "2023-01-27T20:23:02.270Z",
-      "id": 36
     }
   ]
 }

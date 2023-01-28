@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { Header } from '../../components/Header'
 import { Search } from './components/Search'
 import { MainContainer, TableMain } from './styles'
