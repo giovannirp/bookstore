@@ -60,9 +60,22 @@ export const TableMain = styled.table`
 export const TdUnic = styled.td`
   display: flex;
   justify-content: center;
+  height: 77px;
 `
 
 export const ThUnic = styled.td`
   display: flex;
   justify-content: center;
+`
+
+export const ButtonList = styled.button`
+  background: ${(props) => props.theme['red-500']};
+  height: 35px;
+  max-width: 80px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 0;
+  color: ${(props) => props.theme.white};
+  cursor: pointer;
 `

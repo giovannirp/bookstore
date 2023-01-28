@@ -6,6 +6,7 @@ import { ListProducts } from './pages/ListProducts'
 import { Main } from './pages/Main/Main'
 import { NotFound } from './pages/NotFound'
 import { RegistrationBooks } from './pages/RegistrationBooks'
+import { Teste } from './pages/Teste'
 
 export function Router() {
   return (
@@ -15,6 +16,7 @@ export function Router() {
         <Route path="/registration" element={<RegistrationBooks />} />
         <Route path="/about" element={<About />} />
         <Route path="/list-products" element={<ListProducts />} />
+        <Route path="/teste" element={<Teste />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

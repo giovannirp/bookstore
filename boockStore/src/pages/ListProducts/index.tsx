@@ -2,7 +2,13 @@ import { useContext, useState } from 'react'
 import { BooksContext } from '../../contexts/BooksContext'
 import { dateFormater } from '../../ultis/formatter'
 
-import { ContainerListProducts, TableMain, TdUnic, ThUnic } from './styles'
+import {
+  ButtonList,
+  ContainerListProducts,
+  TableMain,
+  TdUnic,
+  ThUnic,
+} from './styles'
 
 export function ListProducts() {
   const { books } = useContext(BooksContext)
@@ -39,9 +45,9 @@ export function ListProducts() {
                 <td>{item.description}</td>
                 <td>{dateFormater.format(new Date(item.createdAt))}</td>
                 <td>
-                  <button onClick={() => deleteButton(item.id)}>
-                    Botão {item.id}
-                  </button>
+                  <ButtonList onClick={() => deleteButton(item.id)}>
+                    Excluir
+                  </ButtonList>
                 </td>
               </tr>
             )
