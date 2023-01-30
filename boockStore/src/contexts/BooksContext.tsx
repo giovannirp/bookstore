@@ -38,7 +38,7 @@ export function BooksContextProvider({ children }: BooksProviderProps) {
 
   useEffect(() => {
     fetchBooks()
-  }, [books])
+  }, [])
 
   return (
     <BooksContext.Provider value={{ books, fetchBooks }}>
