@@ -2,6 +2,7 @@ import { Route } from 'react-router'
 import { Routes } from 'react-router-dom'
 import { DefaultLayout } from './layouts/DefaultLayout'
 import { About } from './pages/About'
+import { Doubt } from './pages/Doubt'
 import { ListProducts } from './pages/ListProducts'
 import { Main } from './pages/Main/Main'
 import { NotFound } from './pages/NotFound'
@@ -16,6 +17,7 @@ export function Router() {
         <Route path="/registration" element={<RegistrationBooks />} />
         <Route path="/about" element={<About />} />
         <Route path="/list-products" element={<ListProducts />} />
+        <Route path="/doubt" element={<Doubt />} />
         <Route path="/teste" element={<Teste />} />
         <Route path="*" element={<NotFound />} />
       </Route>

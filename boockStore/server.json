@@ -23,5 +23,23 @@
       "createdAt": "2023-01-28T15:13:11.747Z",
       "id": 34
     }
-  ]
+  ],
+    "doubt": [
+      {
+        "title": "Quanto tempo demorar para ter o Livro?",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+      },
+      {
+        "title": "Qual a data de criação de todos os livros?",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's"
+      },
+      {
+        "title": "simply dummy text of the printing s?",
+        "description": "Lorem Ipsum is sng industry. Lorem Ipsum has been the industry's"
+      },
+      {
+        "title": "Dote printing text of the printing s?",
+        "description": "Lorem Ipsum is Ipsum has been the industry's"
+      }
+    ]
 }
