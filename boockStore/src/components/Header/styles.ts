@@ -46,3 +46,15 @@ export const LinkLogo = styled(Link)`
     outline: 0;
   }
 `
+
+export const LinkDoubt = styled(Link)`
+  color: ${(props) => props.theme['gray-100']};
+  font-size: 22px;
+  text-decoration: none;
+  transition: 0.9s all;
+
+  &:hover {
+    color: ${(props) => props.theme['gray-300']};
+    text-decoration: underline;
+  }
+`
