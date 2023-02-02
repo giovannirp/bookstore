@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { ContainerDoubt, ContentDoubt } from './styles'
+import { Link } from 'react-router-dom'
+import { ContainerDoubt, ContentDoubt, LinkAbout } from './styles'
 
 export interface IDoubt {
   id: number
@@ -36,6 +37,7 @@ export function Doubt() {
           </>
         )
       })}
+      <LinkAbout to="about">Clique aqui e veja tudo sobre o sistemas</LinkAbout>
     </ContainerDoubt>
   )
 }

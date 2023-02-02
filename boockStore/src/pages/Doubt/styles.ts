@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const ContainerDoubt = styled.section`
@@ -20,5 +21,16 @@ export const ContentDoubt = styled.section`
   p {
     line-height: 21px;
     margin-bottom: 15px;
+  }
+`
+
+export const LinkAbout = styled(Link)`
+  color: ${(props) => props.theme['red-300']};
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  &:hover {
+    text-decoration: underline;
   }
 `

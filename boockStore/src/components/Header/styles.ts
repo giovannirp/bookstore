@@ -49,12 +49,21 @@ export const LinkLogo = styled(Link)`
 
 export const LinkDoubt = styled(Link)`
   color: ${(props) => props.theme['gray-100']};
-  font-size: 22px;
+  font-size: 19px;
   text-decoration: none;
   transition: 0.9s all;
 
   &:hover {
     color: ${(props) => props.theme['gray-300']};
     text-decoration: underline;
+  }
+`
+
+export const ContentInfo = styled.div`
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 10px;
   }
 `
