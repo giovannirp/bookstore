@@ -11,7 +11,7 @@ export const ContainerDoubt = styled.section`
     margin-bottom: 25px;
   }
 `
-export const ContentDoubt = styled.section`
+export const ContentDoubt = styled.div`
   h2 {
     color: ${(props) => props.theme['green-300']};
     font-size: 14px;

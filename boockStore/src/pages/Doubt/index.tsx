@@ -19,14 +19,14 @@ export function Doubt() {
   }
 
   useEffect(() => {
-    console.log(doubt)
     fetchDoubt()
-  }, [doubt])
+  }, [])
 
   return (
     <ContainerDoubt>
       <h1>Tire todas suas duvidas</h1>
       {doubt.map((item) => {
+        console.log(item.id)
         return (
           <>
             <ContentDoubt key={item.id}>
